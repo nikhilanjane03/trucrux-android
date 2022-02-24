@@ -1,0 +1,38 @@
+From 5c891b13b5407b51f2f52a8262bb0c569f000061 Mon Sep 17 00:00:00 2001
+From: Sawan Roy <sawan.roy@trunexa.com>
+Date: Mon, 7 Feb 2022 19:05:40 +0530
+Subject: [PATCH 8/8] Trunexa: imx8mq: sepolicy: Whitelist domain. It is a fix
+ for WiFi upon resume
+
+---
+ prebuilts/api/30.0/public/property.te | 1 +
+ public/property.te                    | 1 +
+ 2 files changed, 2 insertions(+)
+
+diff --git a/prebuilts/api/30.0/public/property.te b/prebuilts/api/30.0/public/property.te
+index 9a93518..ab8c512 100644
+--- a/prebuilts/api/30.0/public/property.te
++++ b/prebuilts/api/30.0/public/property.te
+@@ -565,6 +565,7 @@ compatible_property_only(`
+   # Neverallow coredomain to set vendor properties
+   neverallow {
+     coredomain
++    -domain
+     -init
+     -system_writes_vendor_properties_violators
+   } {
+diff --git a/public/property.te b/public/property.te
+index 9a93518..ab8c512 100644
+--- a/public/property.te
++++ b/public/property.te
+@@ -565,6 +565,7 @@ compatible_property_only(`
+   # Neverallow coredomain to set vendor properties
+   neverallow {
+     coredomain
++    -domain
+     -init
+     -system_writes_vendor_properties_violators
+   } {
+-- 
+2.7.4
+

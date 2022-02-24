@@ -1,0 +1,25 @@
+From 370827e26969400c198a35e5410ee619f0a081be Mon Sep 17 00:00:00 2001
+From: Sawan Roy <sawan.roy@trunexa.com>
+Date: Mon, 7 Feb 2022 17:30:46 +0530
+Subject: [PATCH 2/2] Trunexa: imx8mq: imx-mkimage: Change target name
+
+---
+ iMX8M/soc.mak | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/iMX8M/soc.mak b/iMX8M/soc.mak
+index d1316fe..6febbcf 100644
+--- a/iMX8M/soc.mak
++++ b/iMX8M/soc.mak
+@@ -135,7 +135,7 @@ clean:
+ 
+ dtbs = evk.dtb
+ $(dtbs):
+-	./$(DTB_PREPROC) $(PLAT)-evk.dtb $(dtbs)
++	./$(DTB_PREPROC) $(PLAT)-trux-DVP.dtb $(dtbs)
+ 
+ u-boot.itb: $(dtbs)
+ 	./$(PAD_IMAGE) tee.bin
+-- 
+2.7.4
+

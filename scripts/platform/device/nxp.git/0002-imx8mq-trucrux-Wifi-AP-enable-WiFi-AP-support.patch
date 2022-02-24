@@ -1,0 +1,25 @@
+From 66f015cb19bfc4a28a027d95649501b5a845d06d Mon Sep 17 00:00:00 2001
+From: Sawan Roy <sawan.roy@trunexa.com>
+Date: Fri, 18 Feb 2022 19:02:31 +0530
+Subject: [PATCH 2/3] imx8mq-trucrux:Wifi AP:enable WiFi AP support
+
+---
+ common/wifi/WifiOverlay/res/values/config.xml | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/common/wifi/WifiOverlay/res/values/config.xml b/common/wifi/WifiOverlay/res/values/config.xml
+index 42d59eb..ffce3d1 100644
+--- a/common/wifi/WifiOverlay/res/values/config.xml
++++ b/common/wifi/WifiOverlay/res/values/config.xml
+@@ -27,7 +27,7 @@
+     <bool translatable="false" name="config_wifi_background_scan_support">true</bool>
+ 
+     <!-- Enable ACS (auto channel selection) for Wifi hotspot (SAP) -->
+-    <bool translatable="false" name="config_wifi_softap_acs_supported">true</bool>
++    <bool translatable="false" name="config_wifi_softap_acs_supported">false</bool>
+ 
+     <!-- Enable 802.11ac for Wifi hotspot (SAP) -->
+     <bool translatable="false" name="config_wifi_softap_ieee80211ac_supported">true</bool>
+-- 
+2.7.4
+
